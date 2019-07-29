@@ -6,16 +6,19 @@
   <title>ToDo</title>
   <meta name="description" content="基本的な機能を備えたTODO管理ツールです。">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" language="javascript" src="todo.js"></script>
 </head>
 <body>
   <div class="header">
     <h1>TODO<span>.</span></h1>
   </div>
   <div class="inputpart_todo">
-    <input type="inputTextbox" name="input_todo" type="text">
-    <!-- <label class="inputLabel">TODO</label> -->
+    <form name="input_todo" action="">
+      <input name="inputTextBox" type="text" value="" />
+      <input name="addButton" type="button" value="追加" onclick="onButtonClick();" />
+    </form>
   </div>
-  <div class="displaypart-todo">
+  <div class="displaypart-todo" id="display">
   </div>
   <dib class="footer"</div>
     <h1>©️KAWAGUCHITOYOSU All Rights Reserved.</h1>
