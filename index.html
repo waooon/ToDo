@@ -8,17 +8,18 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script type="text/javascript" language="javascript" src="todo.js"></script>
 </head>
-<body>
+<body onLoad="document.input_todo.inputTextBox.focus()">
   <div class="container">
     <header class="header">
       <h1>TODO<span>.</span></h1>
     </header>
     <div class="main">
       <div class="inputpart_todo">
-        <form name="input_todo" action="">
-          <input name="inputTextBox" type="text" value="" />
+        <form name="input_todo" action="" onsubmit="return false;">
+          <input name="inputTextBox" type="text" value="" onkeydown="enter();"/>
           <input name="addButton" type="button" value="追加" onclick="onButtonClick();" />
         </form>
+        <input name="deleteButton" type="button" value="削除" onclick="onDeleteButtonClick();" />
       </div>
       <div class="displaypart-todo" id="display">
       </div>

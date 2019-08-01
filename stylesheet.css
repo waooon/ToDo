@@ -52,7 +52,7 @@ header{
   overflow: hidden;
 }
 header h1{
-  font-size:120%;
+  font-size:130%;
   color:#313131;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -267,9 +267,17 @@ footer address{
   float: left;
   margin: 20px 20px;
 }
-
-
-
+.inputpart_todo input[name="deleteButton"]{
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #6E6E6E;
+  float: left;
+  margin: 20px 0px;
+}
 
 /*displaypart-todo*/
 .displaypart-todo{
@@ -287,6 +295,7 @@ footer address{
   font-size: 16px;
   color: #6E6E6E;
   float: left;
+  clear: left; /*回り込みを解除*/
 }
 
 .oya input[type="button"]{
@@ -299,4 +308,16 @@ footer address{
   color: #6E6E6E;
   float: left;
   margin-left: 20px;
+}
+
+.oya input[type="checkbox"]{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: #6E6E6E;
+  float: left;
+  margin: 0px 30px;
+  transform: scale(2.0);
 }
