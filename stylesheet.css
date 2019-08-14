@@ -276,7 +276,7 @@ footer address{
   font-size: 16px;
   color: #6E6E6E;
   float: left;
-  margin: 20px 0px;
+  margin: 20px 20px;
 }
 
 /*displaypart-todo*/
@@ -320,4 +320,12 @@ footer address{
   float: left;
   margin: 0px 30px;
   transform: scale(2.0);
+}
+
+.editbutton {
+    font-family: FontAwesome;
+    width:50px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
 }

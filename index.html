@@ -7,8 +7,9 @@
   <meta name="description" content="基本的な機能を備えたTODO管理ツールです。">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script type="text/javascript" language="javascript" src="todo.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
-<body onLoad="document.input_todo.inputTextBox.focus()">
+<body onLoad="document.input_todo.inputTextBox.focus(), readList()">
   <div class="container">
     <header class="header">
       <h1>TODO<span>.</span></h1>
