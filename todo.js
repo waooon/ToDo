@@ -5,18 +5,18 @@ var listArr = [];
 storageKey = "listObj";
 
 function addList(bdy){
-  var oya = document.createElement("div");
-  oya.classList.add("oya");
+  var todoListWrapper = document.createElement("div");
+  todoListWrapper.classList.add("todoListWrapper");
 
-  // リスト内容
-  var target = document.createElement("div");
-  target.classList.add("list");
-  target.setAttribute("id", "inputform");
-  target.setAttribute("contenteditable", "true");
-  target.setAttribute("wrap", "off");
-  // var text = document.forms.input_todo.inputTextBox.value + "\n"
-  var text = bdy;
+  // リスト(liタグ)
+  var listWrapper = document.createElement("ul");
+  listWrapper.classList.add("listWrapper");
+  listWrapper.setAttribute("id", "listWrapper");
 
+  // リスト内容(ulタグ)
+  var content = document.createElement("li");
+  content.classList.add("content");
+  content.setAttribute("id", "content");
 
   // 完了チェックボックス
   var doneCheckBox = document.createElement("input");
@@ -28,25 +28,26 @@ function addList(bdy){
   var editButton = document.createElement("button");
   editButton.setAttribute("type", "submit");
   editButton.setAttribute("class", "editbutton");
-  // editButton.setAttribute("value", "&#xf044;");
   var editButtonIcon = document.createElement("i")
   editButtonIcon.setAttribute("class", "fas fa-edit fa-3x")
   editButton.appendChild(editButtonIcon);
 
+  // リストのdiv
   var parent_object = document.getElementById("display");
 
+  // 入力部分
   var inputpart = document.getElementsByName("inputTextBox");
 
-  if(text !== "\n"){
-    // target.innerHTML += text.replace(/\r?\n/g, '');
-    target.innerHTML += text;
-    parent_object.appendChild(oya);
-    oya.appendChild(target);
-    oya.appendChild(doneCheckBox);
-    oya.appendChild(editButton);
+  if(bdy !== "\n"){
+    content.innerHTML += bdy;
+    parent_object.appendChild(todoListWrapper);
+    todoListWrapper.appendChild(listWrapper);
+    listWrapper.appendChild(content);
+    todoListWrapper.appendChild(doneCheckBox);
+    todoListWrapper.appendChild(editButton);
 
     inputpart[0].value = "";
-    saveList(text);
+    saveList(bdy);
   }
 }
 
@@ -90,7 +91,7 @@ function enter(){
 
 function isChecked(){
   var chkBox = document.activeElement;
-  var inputform = chkBox.parentElement.children.inputform;
+  var inputform = chkBox.parentElement.children[0];
   if(chkBox.checked && inputform){
     inputform.style.textDecoration = "line-through";
   }

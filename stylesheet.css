@@ -43,6 +43,23 @@ a:hover {
   transition: all 0.5s;
 }
 
+ul{
+  padding: 0;
+}
+
+li{
+
+}
+
+ul li {
+  color: black;
+  position:relative;
+  background: white;/*バーの色*/
+  line-height: 1.8;
+  border-left : solid 30px #5c9ee7;/*先の色＝アイコン裏の色*/
+  list-style-type: none!important;
+  display: inline-block;
+}
 
 /*****HEADER*****/
 header{
@@ -259,7 +276,7 @@ footer address{
 .inputpart_todo input[type="button"]{
   position: relative;
   display: block;
-  width: 100px;
+  width: 80px;
   height: 40px;
   border-radius: 5px;
   font-size: 16px;
@@ -270,7 +287,7 @@ footer address{
 .inputpart_todo input[name="deleteButton"]{
   position: relative;
   display: block;
-  width: 100px;
+  width: 80px;
   height: 40px;
   border-radius: 5px;
   font-size: 16px;
@@ -287,39 +304,47 @@ footer address{
   clear: both;
 }
 
-
-.list{
-  width: 527px;
+.content{
+  width: 100%;
   height: 40px;
-  margin: 0px 10px 10px 5px;
+  padding-top: 10px;
+  padding-left: 5px;
+  float: left;
+}
+
+.todoListWrapper{
+}
+
+.todoListWrapper input[type="submit"]{
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #6E6E6E;
+  float: left;
+}
+
+.todoListWrapper input[type="checkbox"]{
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  color: #6E6E6E;
+  float: left;
+  transform: scale(2.0);
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.listWrapper{
+  width: 500px;
+  height: 50px;
+  margin: 0px 10px 0px 5px;
   font-size: 16px;
   color: #6E6E6E;
   float: left;
   clear: left; /*回り込みを解除*/
-}
-
-.oya input[type="button"]{
-  position: relative;
-  display: block;
-  width: 100px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #6E6E6E;
-  float: left;
-  margin-left: 20px;
-}
-
-.oya input[type="checkbox"]{
-  position: relative;
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  color: #6E6E6E;
-  float: left;
-  margin: 0px 30px;
-  transform: scale(2.0);
 }
 
 .editbutton {
@@ -328,4 +353,5 @@ footer address{
     height: 40px;
     background-color: transparent;
     border: none;
+    margin: 5px 0px;
 }
