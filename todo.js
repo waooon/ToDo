@@ -28,6 +28,7 @@ function addList(bdy){
   var editButton = document.createElement("button");
   editButton.setAttribute("type", "submit");
   editButton.setAttribute("class", "editbutton");
+  editButton.setAttribute("onclick", "onEditButtonClick();");
   var editButtonIcon = document.createElement("i")
   editButtonIcon.setAttribute("class", "fas fa-edit fa-3x")
   editButton.appendChild(editButtonIcon);
@@ -80,6 +81,11 @@ function onDeleteButtonClick(){
 
 // 編集ボタンクリック時 ※保留
 function onEditButtonClick(){
+  var activeContent = document.activeElement;
+  var activeList = activeContent.parentElement.children[0];
+
+  var text = activeList.innerText;
+  
 }
 
 function enter(){

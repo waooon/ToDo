@@ -240,7 +240,7 @@ footer address{
   padding: 20px 40px;
 }
 .header span{
-  color: #F26964;
+  color: #5c9ee7;
 }
 
 /*container*/
@@ -293,12 +293,12 @@ footer address{
   font-size: 16px;
   color: #6E6E6E;
   float: left;
-  margin: 20px 20px;
+  margin: 20px 5px;
 }
 
 /*displaypart-todo*/
 .displaypart-todo{
-  padding: 20px 20px 20px 40px;
+  padding: 20px 20px 20px 35px;
   height: auto !important;
   height: 100%;
   clear: both;
@@ -340,7 +340,7 @@ footer address{
 .listWrapper{
   width: 500px;
   height: 50px;
-  margin: 0px 10px 0px 5px;
+  margin: 0px 0px 0px 5px;
   font-size: 16px;
   color: #6E6E6E;
   float: left;
@@ -353,5 +353,5 @@ footer address{
     height: 40px;
     background-color: transparent;
     border: none;
-    margin: 5px 0px;
+    margin: 5px 5px;
 }
